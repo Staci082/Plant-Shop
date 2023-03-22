@@ -2,8 +2,6 @@
 
 const body = document.querySelector("body");
 
-// new elements
-
 const container = document.createElement("div");
 body.appendChild(container);
 
@@ -33,6 +31,7 @@ const bodyStyle = `
     justify-content: center;
     align-item: center;
     background-image: url("Images/background.jpg");
+    background-size: cover;
     padding-top: 10px;
 `;
 body.style.cssText = bodyStyle;
@@ -96,29 +95,3 @@ itemImgStyle = `
 `;
 itemImg.style.cssText = itemImgStyle;
 
-const products = [
-  {
-    name: "plant1",
-    img: "plant.png",
-  },
-  {
-    name: "plant2",
-    img: "plant.png",
-  },
-  {
-    name: "plant3",
-    img: "plant.png",
-  },
-  {
-    name: "plant4",
-    img: "plant.png",
-  },
-  {
-    name: "plant5",
-    img: "plant.png",
-  },
-  {
-    name: "plan6",
-    img: "plant.png",
-  },
-];
