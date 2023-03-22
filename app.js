@@ -1,33 +1,48 @@
-
-
-
-//variables
+// variables
 
 const body = document.querySelector("body");
-const container = document.querySelector("#container");
+
+// new elements
+
+const container = document.createElement("div");
+body.appendChild(container);
+
+const nav = document.createElement("div");
+container.appendChild(nav);
+
+const header = document.createElement("div");
+container.appendChild(header);
+
+const itemContainer = document.createElement("div");
+container.appendChild(itemContainer);
+
+const item = document.createElement("div");
+itemContainer.appendChild(item);
+
+const itemImg = document.createElement("div");
+item.appendChild(itemImg);
+
+const itemText = document.createElement("div");
+item.appendChild(itemText);
 
 
-//new elements
-
-const items = document.createElement("div");
-container.appendChild(items);
-items.classList.add("items");
-
-
-//styling
+// styling
 
 const bodyStyle = `
+    display: flex;
+    justify-content: center;
+    align-item: center;
     background-image: url("Images/background.jpg");
-    padding-top: 5%;
-    padding-left: 15%;
+    padding-top: 10px;
 `;
 body.style.cssText = bodyStyle;
 
-
 const containerStyle = `
     display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     width: 70vw;
-    height: 90vh;
+    height: auto;
+    padding: 0px 15px 15px 10px;
     background: white;
     border-radius: 3%;
     box-shadow: rgba(0, 0, 0, 0.4) 20px 30px 90px;
@@ -35,10 +50,75 @@ const containerStyle = `
 `;
 container.style.cssText = containerStyle;
 
+const navStyle = `
+    position: fixed;
+    width: 70vw;
+    height: 40px;
+    border: red 4px solid;
+    background: white;   /* needs to stay for wwhen scrolling */
+`;
+nav.style.cssText = navStyle;
 
-const itemsStyle = `
+const headerStyle = `
+    grid-row: 1/2;
+    width: 70vw;
+    height: 50vh;
+    border: green 4px solid;
+    margin-bottom: 20px;
+`;
+header.style.cssText = headerStyle;
+
+const itemContainerStyle = `
+    grid-row: auto;
+    display: flex;
+    justify-content: space-around;
+    width: 70vw;
+    height: auto;
+    padding-top: 20px;
+    border: blue 4px solid;
+`;
+itemContainer.style.cssText = itemContainerStyle;
+
+const itemStyle = `
     width: 250px;
     height: 250px;
-    border: blue solid 4px;
+    border-radius: 5%;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 `;
-items.style.cssText = itemsStyle;
+item.style.cssText = itemStyle;
+
+itemImgStyle = `
+    width: 250px;
+    height: 180px;
+    background: pink;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+`;
+itemImg.style.cssText = itemImgStyle;
+
+const products = [
+  {
+    name: "plant1",
+    img: "plant.png",
+  },
+  {
+    name: "plant2",
+    img: "plant.png",
+  },
+  {
+    name: "plant3",
+    img: "plant.png",
+  },
+  {
+    name: "plant4",
+    img: "plant.png",
+  },
+  {
+    name: "plant5",
+    img: "plant.png",
+  },
+  {
+    name: "plan6",
+    img: "plant.png",
+  },
+];
