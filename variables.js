@@ -3,14 +3,14 @@ const body = document.querySelector("body");
 const container = document.createElement("div");
 body.appendChild(container);
 
+const header = document.createElement("div");
+container.appendChild(header);
+
 const nav = document.createElement("div");
-container.appendChild(nav);
+header.appendChild(nav);
 
 const navContent = document.getElementById("navContent");
 nav.appendChild(navContent);
-
-const header = document.createElement("div");
-container.appendChild(header);
 
 const itemContainer = document.createElement("div");
 container.appendChild(itemContainer);

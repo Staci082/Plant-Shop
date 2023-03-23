@@ -23,15 +23,12 @@ const containerStyle = `
 container.style.cssText = containerStyle;
 
 const navStyle = `
-    position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 70vw;
     height: 40px;
     margin-top: 10px;
-    border-radius: 27%;
-    background: white;   /* needs to stay for when scrolling */
 `;
 nav.style.cssText = navStyle;
 
