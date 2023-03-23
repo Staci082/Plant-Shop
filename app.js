@@ -8,6 +8,9 @@ body.appendChild(container);
 const nav = document.createElement("div");
 container.appendChild(nav);
 
+const navContent = document.getElementById("navContent");
+nav.appendChild(navContent);
+
 const header = document.createElement("div");
 container.appendChild(header);
 
@@ -51,18 +54,33 @@ container.style.cssText = containerStyle;
 
 const navStyle = `
     position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 70vw;
     height: 40px;
-    border: red 4px solid;
-    background: white;   /* needs to stay for wwhen scrolling */
+    margin-top: 10px;
+    border-radius: 27%;
+    background: white;   /* needs to stay for when scrolling */
 `;
 nav.style.cssText = navStyle;
+
+const navContentStyle = `
+    list-style: none;
+    width: 20vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    color: grey;
+`;
+navContent.style.cssText = navContentStyle;
+
 
 const headerStyle = `
     grid-row: 1/2;
     width: 70vw;
     height: 50vh;
-    border: green 4px solid;
+    border : green 4px solid;
     margin-bottom: 20px;
 `;
 header.style.cssText = headerStyle;
@@ -86,7 +104,7 @@ const itemStyle = `
 `;
 item.style.cssText = itemStyle;
 
-itemImgStyle = `
+const itemImgStyle = `
     width: 250px;
     height: 180px;
     background: pink;
