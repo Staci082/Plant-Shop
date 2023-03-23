@@ -9,9 +9,10 @@ const bodyStyle = `
 `;
 body.style.cssText = bodyStyle;
 
+
 const containerStyle = `
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
     width: 70vw;
     height: auto;
     padding: 0px 15px 15px 10px;
@@ -21,6 +22,7 @@ const containerStyle = `
     border: #a5d5a5 1px solid;
 `;
 container.style.cssText = containerStyle;
+
 
 const navStyle = `
     display: flex;
@@ -32,6 +34,7 @@ const navStyle = `
 `;
 nav.style.cssText = navStyle;
 
+
 const navContentStyle = `
     list-style: none;
     width: 20vw;
@@ -42,6 +45,15 @@ const navContentStyle = `
 `;
 navContent.style.cssText = navContentStyle;
 
+const navIconsStyle = `
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 25px;
+    width: 150px;
+    margin-left: 200px;
+`;
+navIcons.style.cssText = navIconsStyle;
 
 const headerStyle = `
     grid-row: 1/2;
@@ -52,16 +64,18 @@ const headerStyle = `
 `;
 header.style.cssText = headerStyle;
 
+
 const itemContainerStyle = `
     grid-row: auto;
     display: flex;
     justify-content: space-around;
     width: 70vw;
     height: auto;
-    padding-top: 20px;
+    padding: 20px 0 20px 0;
     border: blue 4px solid;
 `;
 itemContainer.style.cssText = itemContainerStyle;
+
 
 const itemStyle = `
     width: 250px;
@@ -70,6 +84,7 @@ const itemStyle = `
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 `;
 item.style.cssText = itemStyle;
+
 
 const itemImgStyle = `
     width: 250px;
