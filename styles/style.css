@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@100&family=Rubik+Bubbles&display=swap");
+body {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../images/background.jpg");
+  background-size: cover;
+  padding-top: 10px;
+}
+
+#navContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: "Rubik Bubbles";
+  font-size: 3rem;
+  color: white;
+  border: rgb(101, 201, 165) solid 20px;
+}
+#navContent ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+.container {
+  display: grid;
+  justify-content: center;
+  grid-template-rows: auto;
+  width: 100%;
+  height: auto;
+  padding: 0px 15px 15px 10px;
+  background: rgba(101, 201, 165, 0.5);
+}
+
+.item-container {
+  grid-row: auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 70vw;
+  height: auto;
+  padding: 20px 0 20px 0;
+}
+
+.item {
+  width: 11rem;
+  height: 13rem;
+  border-radius: 5%;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  background: rgb(255, 255, 255);
+}
+
+.item-image {
+  position: relative;
+  width: 11rem;
+  height: 9rem;
+  background: pink;
+  border-top-left-radius: 5%;
+  border-top-right-radius: 5%;
+}
+.item-image .fa-sun {
+  position: absolute;
+  height: 5rem;
+  color: white;
+}/*# sourceMappingURL=style.css.map */

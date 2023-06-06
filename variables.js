@@ -1,22 +1,12 @@
 
 // globals
 
-const body = document.querySelector("body");
 
-const container = document.createElement("div");
-body.appendChild(container);
 
 const header = document.createElement("div");
 container.appendChild(header);
 
-const nav = document.createElement("div");
-header.appendChild(nav);
 
-const navContent = document.getElementById("navContent");
-nav.appendChild(navContent);
-
-// const navIcons = document.getElementById("icons");
-// nav.appendChild(navIcons);
 
 const itemContainer = document.createElement("div");
 container.appendChild(itemContainer);
@@ -63,7 +53,6 @@ let itemBox = []
 
 for (let i = 0; i < products.length; i++) {
     itemBox += products[i];
-    itemContainer.innerHTML = itemBox.style.cssText = itemStyle;
   }
 
   

@@ -1,14 +1,4 @@
 
-const bodyStyle = `
-    display: flex;
-    justify-content: center;
-    align-item: center;
-    background-image: url("Images/background.jpg");
-    background-size: cover;
-    padding-top: 10px;
-`;
-body.style.cssText = bodyStyle;
-
 
 const containerStyle = `
     display: grid;
@@ -16,53 +6,10 @@ const containerStyle = `
     width: 70vw;
     height: auto;
     padding: 0px 15px 15px 10px;
-    background: white;
-    border-radius: 3%;
-    box-shadow: rgba(0, 0, 0, 0.4) 20px 30px 90px;
-    border: #a5d5a5 1px solid;
+
 `;
 container.style.cssText = containerStyle;
 
-
-const navStyle = `
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 70vw;
-    height: 40px;
-    margin-top: 10px;
-`;
-nav.style.cssText = navStyle;
-
-
-const navContentStyle = `
-    list-style: none;
-    width: 20vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    color: grey;
-`;
-navContent.style.cssText = navContentStyle;
-
-const navIconsStyle = `
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    height: 25px;
-    width: 150px;
-    margin-left: 200px;
-`;
-navIcons.style.cssText = navIconsStyle;
-
-const headerStyle = `
-    grid-row: 1/2;
-    width: 70vw;
-    height: 50vh;
-    border : green 4px solid;
-    margin-bottom: 20px;
-`;
-header.style.cssText = headerStyle;
 
 
 const itemContainerStyle = `
