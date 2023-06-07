@@ -1,47 +1,58 @@
-@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@100&family=Rubik+Bubbles&display=swap');
+
 
 body {
     position : relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("../images/background.jpg");
-    background-size: cover;
+    /* background-image: url("../images/background.jpg");*/
+    background: rgb(228,242,200);
+    background: linear-gradient(309deg, rgba(228,242,200,1) 0%, rgba(49,116,30,1) 100%);
     padding-top: 10px;
+    overflow-x: hidden;
 }
-
-
-#navContent {
-    display: flex; 
-    flex-direction: row;
-    justify-content: space-between;
-    font-family: 'Rubik Bubbles';
-    font-size: 3rem;
-    color: white;
-    border: rgba(101,201,165,255) solid 20px;
-    & ul {
-        display: flex;
-        flex-direction: row;
-        list-style: none;
-    }
-}
-.container {
-    display: grid;
-    justify-content: center;
+.big-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    align-items: center;
     grid-template-rows: auto;
     width: 100%;
     height: auto;
     padding: 0px 15px 15px 10px;
-    background: rgba(101,201,165,0.5) ;
+}
+
+#navbar {
+    height: 10vh;
+    width: 99vw;
+    font-size: 1.5rem;
+    color: white;
+    border: purple solid 2px;
+    & ul {
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: row;
+        list-style: none; 
+        gap: 10px;
+    }
+}
+
+.middle-container {
+    height: 50vh;
+    width: 100%;
+    border: red 2px solid;
 }
 .item-container {
     grid-row: auto;
     display: flex;
     justify-content: space-around;
+    align-items: center;
     flex-wrap: wrap;
-    width: 70vw;
-    height: auto;
+    width: 80vw;
+    height: 12rem;
     padding: 20px 0 20px 0;
+    overflow-y: hidden;
+    border: yellow solid 2px;
 }
 .item {
     width: 11rem;
@@ -58,9 +69,10 @@ body {
     background: pink;
     border-top-left-radius: 5%;
     border-top-right-radius: 5%;
-    & .fa-sun {
-        position: absolute;
-        height: 5rem;
-        color: white;
-    }
+ 
+}
+.item-image .fa-sun {
+    position: absolute;
+    height: 10rem;
+    color: white;
 }
