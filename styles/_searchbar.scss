@@ -20,14 +20,13 @@ button {
 }
 
 .search-container {
-    position: absolute;
     display: flex;
     align-items: center;
-    left: -10vw;
     width: 450px;
     height: 10px;
     padding: 35px;
-    background-color: #f6adbb;
+    margin-left: -7vw;
+    background-color: #f9c5d5;
     border-radius: 20px;
     box-shadow: 0 5px 20px #f6adbb, 0 0 0 10px #ffffffeb;
     transform: scale(0.4);
@@ -63,7 +62,7 @@ button {
 #s-circle {
     position: relative;
     top: -8px;
-    left: 0;
+
     width: 43px;
     height: 43px;
     margin-top: 0;

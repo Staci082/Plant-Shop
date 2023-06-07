@@ -19,14 +19,13 @@ button {
 }
 
 .search-container {
-  position: absolute;
   display: flex;
   align-items: center;
-  left: -10vw;
   width: 450px;
   height: 10px;
   padding: 35px;
-  background-color: #f6adbb;
+  margin-left: -7vw;
+  background-color: #f9c5d5;
   border-radius: 20px;
   box-shadow: 0 5px 20px #f6adbb, 0 0 0 10px rgba(255, 255, 255, 0.9215686275);
   transform: scale(0.4);
@@ -66,7 +65,6 @@ button {
 #s-circle {
   position: relative;
   top: -8px;
-  left: 0;
   width: 43px;
   height: 43px;
   margin-top: 0;
@@ -138,6 +136,11 @@ button span:after {
   background-color: #ed6377;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -149,43 +152,30 @@ body {
   /* background-image: url("../images/background.jpg");*/
   /* background: linear-gradient(309deg, rgba(228,242,200,1) 0%, rgba(49,116,30,1) 100%); */
   background: rgb(156, 180, 143);
-  padding-top: 10px;
   overflow-x: hidden;
   padding: 0vh 5vw;
-}
-
-.big-container {
-  display: flex;
-  flex-direction: column;
-  gap: 2vh;
-  align-items: center;
-  grid-template-rows: auto;
-  width: 100%;
-  height: auto;
-  padding: 0px 15px 15px 10px;
 }
 
 #navbar {
   position: fixed;
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  height: 6vh;
-  width: 95vw;
+  justify-content: space-between;
+  height: 7vh;
+  width: 88.5vw;
   background: rgb(156, 180, 143);
   border-bottom: white 2px dotted;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: white;
   z-index: 2;
   top: 0;
 }
 #navbar ul {
-  position: absolute;
   display: flex;
-  justify-content: flex-start;
   flex-direction: row;
+  justify-content: space-between;
   list-style: none;
-  gap: 30px;
+  gap: 50px;
 }
 #navbar ul a {
   cursor: pointer;
@@ -194,10 +184,8 @@ body {
   color: #f9d9de;
 }
 #navbar .icon-container {
-  position: absolute;
   display: flex;
-  gap: 20px;
-  right: 2vw;
+  gap: 30px;
 }
 #navbar .icon-container i {
   cursor: pointer;
@@ -206,33 +194,78 @@ body {
   color: #f9d9de;
 }
 
+.big-container {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding: 0 15px 0 10px;
+}
+
 .middle-container {
   position: relative;
-  padding-top: 10vh;
-  margin-top: 10vh;
-  margin-bottom: 5vh;
-  height: 45vh;
-  width: 94vw;
   border-radius: 15px;
   background: rgb(156, 180, 143);
   background: linear-gradient(330deg, rgb(156, 180, 143) 24%, rgb(231, 249, 195) 86%);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   overflow: hidden;
 }
-.middle-container .flower {
+
+.top {
+  padding-top: 10vh;
+  margin-top: 10vh;
+  height: 40vh;
+  width: 85vw;
+  grid-column: 1/3;
+  grid-row: 1;
+}
+.top .lotus {
   position: absolute;
   height: 100%;
   width: 100%;
-  right: -68vw;
+  right: -58vw;
   bottom: -1vh;
   background-image: url("../images/lotus.png");
   background-repeat: no-repeat;
   background-size: contain;
 }
 
+.bottom-left {
+  grid-column: 1/2;
+  grid-row: 2;
+  height: 40vh;
+  width: 25vw;
+  margin-top: -40vh;
+  margin-left: 5vw;
+  background: linear-gradient(50deg, rgb(156, 180, 143) 14%, rgb(231, 249, 195) 76%);
+}
+.bottom-left .flower {
+  position: absolute;
+  height: 60%;
+  width: 60%;
+  bottom: 0;
+  background-image: url("../images/flower.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.bottom-right {
+  grid-column: 2/3;
+  grid-row: 2;
+  height: 60px;
+  width: 60px;
+  margin-left: -20vw;
+}
+.bottom-right:hover {
+  transform: scale(1.1);
+}
+
 .item-container {
+  grid-column: 1/3;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   height: auto;
@@ -249,27 +282,32 @@ body {
   height: 14rem;
   border-radius: 5%;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-  background: rgb(255, 255, 255);
-  margin: 0 1vh 2vh 1vw;
+  background: #f9c5d5;
+  margin: 0 2vh 2vh 2vw;
 }
 
 .item-image {
   position: relative;
   width: 11rem;
   height: 9rem;
-  background: pink;
+  background: white;
   border-top-left-radius: 5%;
   border-top-right-radius: 5%;
+  border-bottom-left-radius: 5%;
+  border-bottom-right-radius: 5%;
 }
 .item-image i {
   position: absolute;
   height: 15rem;
-  color: white;
+  color: #f9c5d5;
   right: 5px;
   top: 17px;
   cursor: pointer;
 }
 .item-image i:hover {
+  color: #ed6377;
+}
+.item-image i:active {
   color: #ed6377;
 }
 

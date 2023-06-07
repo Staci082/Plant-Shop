@@ -14,58 +14,70 @@
         />
     </head>
     <body>
-        <div class="big-container">
-            <nav id="navbar">
-
-                <div class="search-container">
-                    <form method="get" action="">
-                        <div class="tb">
-                            <div class="td">
-                                <input id="search-input" type="text" placeholder="Search..." required />
-                            </div>
-                            <div class="td" id="s-cover">
-                                <button id="search-btn" type="submit">
-                                    <div id="s-circle"></div>
-                                    <span></span>
-                                </button>
-                            </div>
+        <nav id="navbar">
+            <div class="search-container">
+                <form method="get" action="">
+                    <div class="tb">
+                        <div class="td">
+                            <input
+                                id="search-input"
+                                type="text"
+                                placeholder="Search..."
+                                required
+                            />
                         </div>
-                    </form>
-                </div>
-                <ul>
-                    <li><a>Home</a></li>
-                    <li><a>Products</a></li>
-                    <li><a>Contact</a></li>
-                </ul>
+                        <div class="td" id="s-cover">
+                            <button id="search-btn" type="submit">
+                                <div id="s-circle"></div>
+                                <span></span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <ul>
+                <li><a>Home</a></li>
+                <li><a>Products</a></li>
+                <li><a>Contact</a></li>
+            </ul>
 
-               
-
-                <div class="icon-container">
-                    <a><i class="fa-regular fa-sun"></i></a>
-                    <a><i class="fa-solid fa-cart-shopping"></i></a>
-                </div>
-            </nav>
-            <!-- <div id="icons">
+            <div class="icon-container">
+                <a><i class="fa-regular fa-sun"></i></a>
+                <a><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </nav>
+        <!-- <div id="icons">
         <img src="images/search.png"/>
         <img src="images/user.png"/>
         <img src="images/basket.png"/>
     </div>
     -->
-            <div class="middle-container">
+        <div class="big-container">
+            <div class="middle-container top">
+                <div class="lotus"></div>
+            </div>
+
+            <div class="middle-container bottom-left">
                 <div class="flower"></div>
             </div>
+            <div class="middle-container bottom-right"></div>
 
             <div class="item-container">
                 <div class="item">
                     <div class="item-image">
-                        <i class="fa-regular fa-sun fa-xl"></i>
+                        <i class="fa-regular fa-sun fa-xl test"></i>
                     </div>
                     <div class="details-container">
-                    <div class="common-name details"><strong>Blue Agave</strong></div>
-                    <div class="latin-name details">Agave verschaffeltii</div>
-                    <div class="price details"><strong>€20.20</strong></div>
+                        <div class="common-name details">
+                            <strong>Blue Agave</strong>
+                        </div>
+                        <div class="latin-name details">
+                            Agave verschaffeltii
+                        </div>
+                        <div class="price details"><strong>€20.20</strong></div>
+                    </div>
                 </div>
-                </div>
+
                 <div class="item">
                     <div class="item-image">
                         <i class="fa-regular fa-sun fa-xl"></i>
@@ -86,6 +98,12 @@
                         <i class="fa-regular fa-sun fa-xl"></i>
                     </div>
                 </div>
+                <div class="item">
+                    <div class="item-image">
+                        <i class="fa-regular fa-sun fa-xl"></i>
+                    </div>
+                </div>
+
                 <div class="item">
                     <div class="item-image">
                         <i class="fa-regular fa-sun fa-xl"></i>
@@ -114,8 +132,7 @@
             </div>
         </div>
 
-
-       <!--  <script src="app.js"></script> -->
+        <script src="../Plant-Shop/apps/app.js"></script>
         <script src="../Plant-Shop/apps/api.js"></script>
     </body>
 </html>
