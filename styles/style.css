@@ -19,21 +19,23 @@ button {
 }
 
 .search-container {
+  position: absolute;
   display: flex;
   align-items: center;
+  left: -10vw;
   width: 450px;
   height: 10px;
   padding: 35px;
   background-color: #f6adbb;
   border-radius: 20px;
   box-shadow: 0 5px 20px #f6adbb, 0 0 0 10px rgba(255, 255, 255, 0.9215686275);
-  transform: scale(0.5);
+  transform: scale(0.4);
 }
 
 input[type=text] {
   width: 100%;
   height: auto;
-  font-size: 2rem;
+  font-size: 3rem;
   line-height: 1;
   outline: none;
   color: #ed6377;
@@ -168,8 +170,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  height: 10vh;
-  width: 90vw;
+  height: 6vh;
+  width: 95vw;
   background: rgb(156, 180, 143);
   border-bottom: white 2px dotted;
   font-size: 1.5rem;
@@ -178,6 +180,7 @@ body {
   top: 0;
 }
 #navbar ul {
+  position: absolute;
   display: flex;
   justify-content: flex-start;
   flex-direction: row;
@@ -191,8 +194,10 @@ body {
   color: #f9d9de;
 }
 #navbar .icon-container {
+  position: absolute;
   display: flex;
   gap: 20px;
+  right: 2vw;
 }
 #navbar .icon-container i {
   cursor: pointer;
@@ -205,8 +210,9 @@ body {
   position: relative;
   padding-top: 10vh;
   margin-top: 10vh;
+  margin-bottom: 5vh;
   height: 45vh;
-  width: 100%;
+  width: 94vw;
   border-radius: 15px;
   background: rgb(156, 180, 143);
   background: linear-gradient(330deg, rgb(156, 180, 143) 24%, rgb(231, 249, 195) 86%);
@@ -217,7 +223,7 @@ body {
   position: absolute;
   height: 100%;
   width: 100%;
-  right: -48vw;
+  right: -68vw;
   bottom: -1vh;
   background-image: url("../images/lotus.png");
   background-repeat: no-repeat;
@@ -229,8 +235,7 @@ body {
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  width: 80vw;
-  height: 15rem;
+  height: auto;
   padding: 20px 0 20px 0;
   overflow-x: hidden;
   /*removes scrollbar*/
@@ -245,7 +250,7 @@ body {
   border-radius: 5%;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   background: rgb(255, 255, 255);
-  margin-bottom: 1vh;
+  margin: 0 1vh 2vh 1vw;
 }
 
 .item-image {

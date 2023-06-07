@@ -30,8 +30,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    height: 10vh;
-    width: 90vw;
+    height: 6vh;
+    width: 95vw;
     background: rgba(156, 180, 143, 255);
     border-bottom: white 2px dotted;
     font-size: 1.5rem;
@@ -39,6 +39,7 @@ body {
     z-index: 2;
     top: 0;
     & ul {
+        position: absolute;
         display: flex;
         justify-content: flex-start;
         flex-direction: row;
@@ -52,25 +53,26 @@ body {
         }
     }
     & .icon-container {
+        position: absolute;
         display: flex;
         gap: 20px;
+        right: 2vw;
         & i {
             cursor: pointer;
             &:hover {
                 color: #f9d9de;
             }
-    }
-    
         }
+    }
 }
-
 
 .middle-container {
     position: relative;
     padding-top: 10vh;
     margin-top: 10vh;
+    margin-bottom: 5vh;
     height: 45vh;
-    width: 100%;
+    width: 94vw;
     border-radius: 15px;
     background: rgb(156, 180, 143);
     background: linear-gradient(
@@ -84,7 +86,7 @@ body {
         position: absolute;
         height: 100%;
         width: 100%;
-        right: -48vw;
+        right: -68vw;
         bottom: -1vh;
         background-image: url("../images/lotus.png");
         background-repeat: no-repeat;
@@ -96,12 +98,11 @@ body {
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    width: 80vw;
-    height: 15rem;
+    height: auto;
     padding: 20px 0 20px 0;
     overflow-x: hidden;
     /*removes scrollbar*/
-    &::-webkit-scrollbar{
+    &::-webkit-scrollbar {
         display: none;
     }
 }
@@ -112,7 +113,7 @@ body {
     border-radius: 5%;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     background: rgba(255, 255, 255);
-    margin-bottom: 1vh;
+    margin: 0 1vh 2vh 1vw;
 }
 
 .item-image {
