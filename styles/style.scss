@@ -1,4 +1,7 @@
+@forward "../styles/searchbar.scss";
+
 body {
+    user-select: none;
     position: relative;
     display: flex;
     justify-content: center;
@@ -9,8 +12,8 @@ body {
     padding-top: 10px;
     overflow-x: hidden;
     padding: 0vh 5vw;
-
 }
+
 .big-container {
     display: flex;
     flex-direction: column;
@@ -26,7 +29,7 @@ body {
     position: fixed;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     height: 10vh;
     width: 90vw;
     background: rgba(156, 180, 143, 255);
@@ -40,141 +43,27 @@ body {
         justify-content: flex-start;
         flex-direction: row;
         list-style: none;
-        gap: 10px;
+        gap: 30px;
+        & a {
+            cursor: pointer;
+            &:hover {
+                color: #f9d9de;
+            }
+        }
     }
+    & .icon-container {
+        display: flex;
+        gap: 20px;
+        & i {
+            cursor: pointer;
+            &:hover {
+                color: #f9d9de;
+            }
+    }
+    
+        }
 }
 
-.tb {
-    display: table;
-    width: 100%;
-}
-
-.td {
-    display: table-cell;
-    vertical-align: middle;
-}
-
-input,
-button {
-    color: #fff;
-    font-family: Nunito;
-    padding: 0;
-    margin: 0;
-    border: 0;
-    background-color: transparent;
-}
-
-.search-container {
-    display: flex;
-    align-items: center;
-    width: 450px;
-    height: 10px;
-    padding: 35px;
-    background-color: #f6adbb;
-    border-radius: 20px;
-    box-shadow: 0 5px 20px #f6adbb, 0 0 0 10px #ffffffeb;
-    transform: scale(0.6);
-}
-
-input[type="text"] {
-    width: 100%;
-    height: 50px;
-    font-size: 2rem;
-    line-height: 1;
-    outline: none;
-}
-
-input[type="text"]::placeholder {
-    color: #e16868;
-}
-
-#s-cover {
-    width: 1px;
-    padding-left: 35px;
-}
-
-button {
-    position: relative;
-    display: block;
-    width: 42px;
-    height: 96px;
-    cursor: pointer;
-    transform: scale(0.5);
-}
-
-#s-circle {
-    position: relative;
-    top: -8px;
-    left: 0;
-    width: 43px;
-    height: 43px;
-    margin-top: 0;
-    border-width: 15px;
-    border: 15px solid #e16868;
-    background-color: transparent;
-    border-radius: 50%;
-    transition: 0.5s ease all;
-}
-
-button span {
-    position: absolute;
-    top: 68px;
-    left: 43px;
-    display: block;
-    width: 45px;
-    height: 15px;
-    background-color: transparent;
-    border-radius: 10px;
-    transform: rotateZ(52deg);
-    transition: 0.5s ease all;
-}
-
-button span:before,
-button span:after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 45px;
-    height: 15px;
-    background-color: #e16868;
-    border-radius: 10px;
-    transform: rotateZ(0);
-    transition: 0.5s ease all;
-}
-
-#s-cover:hover #s-circle {
-    top: -1px;
-    width: 67px;
-    height: 15px;
-    border-width: 0;
-    background-color: #e16868;
-    border-radius: 20px;
-}
-
-#s-cover:hover span {
-    top: 50%;
-    left: 56px;
-    width: 25px;
-    margin-top: -9px;
-    transform: rotateZ(0);
-}
-
-#s-cover:hover button span:before {
-    bottom: 11px;
-    transform: rotateZ(52deg);
-}
-
-#s-cover:hover button span:after {
-    bottom: -11px;
-    transform: rotateZ(-52deg);
-}
-#s-cover:hover button span:before,
-#s-cover:hover button span:after {
-    right: -6px;
-    width: 40px;
-    background-color: #e16868;
-}
 
 .middle-container {
     position: relative;
@@ -193,9 +82,9 @@ button span:after {
     overflow: hidden;
     & .flower {
         position: absolute;
-        height: 52vh;
-        width: 45vw;
-        right: -6vw;
+        height: 100%;
+        width: 100%;
+        right: -48vw;
         bottom: -1vh;
         background-image: url("../images/lotus.png");
         background-repeat: no-repeat;
@@ -208,14 +97,18 @@ button span:after {
     align-items: center;
     flex-wrap: wrap;
     width: 80vw;
-    height: 12rem;
+    height: 15rem;
     padding: 20px 0 20px 0;
-    overflow-y: hidden;
+    overflow-x: hidden;
+    /*removes scrollbar*/
+    &::-webkit-scrollbar{
+        display: none;
+    }
 }
 
 .item {
     width: 11rem;
-    height: 13rem;
+    height: 14rem;
     border-radius: 5%;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     background: rgba(255, 255, 255);
@@ -235,5 +128,27 @@ button span:after {
         color: white;
         right: 5px;
         top: 17px;
+        cursor: pointer;
+        &:hover {
+            color: #ed6377;
+        }
+    }
+}
+.details-container {
+    position: relative;
+    padding: 5px;
+    & .common-name {
+        font-size: 1.2rem;
+    }
+    & .latin-name {
+        color: grey;
+    }
+    & .details {
+        margin: 3px 0px;
+    }
+    & .price {
+        position: absolute;
+        right: 1vw;
+        font-size: 1.2rem;
     }
 }
