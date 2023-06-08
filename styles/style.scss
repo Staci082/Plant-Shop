@@ -1,4 +1,5 @@
-@forward "../styles/searchbar";
+@use '../styles/index' as *;
+
 
 * {
     margin: 0;
