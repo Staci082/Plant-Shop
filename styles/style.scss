@@ -1,4 +1,4 @@
-@forward "../styles/searchbar.scss";
+@forward "../styles/searchbar";
 
 * {
     margin: 0;
@@ -99,9 +99,9 @@ body {
 .bottom-left {
     grid-column: 1/2;
     grid-row: 2;
-    height: 40vh;
-    width: 25vw;
-    margin-top: -40vh;
+    height: 25vh;
+    width: 30vw;
+    margin-top: -20vh;
     margin-left: 5vw;
     background: linear-gradient(
         50deg,
@@ -121,9 +121,10 @@ body {
 .bottom-right {
     grid-column: 2/3;
     grid-row: 2;
-    height: 60px;
-    width: 60px;
-    margin-left: -20vw;
+    height: 30vh;
+    width: 25vw;
+    margin-left: -2vw;
+    margin-top: 2vw;
     &:hover {
         transform: scale(1.1);
     }
@@ -183,7 +184,7 @@ body {
         font-size: 1.2rem;
     }
     & .latin-name {
-        color: grey;
+        color: rgb(180, 229, 19);
     }
     & .details {
         margin: 3px 0px;

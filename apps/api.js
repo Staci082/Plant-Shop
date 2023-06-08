@@ -19,6 +19,8 @@ async function fetchURL(method, callback) {
     })
 }
 
-    fetchURL("category/", "cactus+and+succulent") 
+
+
+   // fetchURL("category/", "cactus+and+succulent") 
 
 

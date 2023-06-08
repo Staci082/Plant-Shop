@@ -40,10 +40,6 @@ input[type=text] {
   color: #ed6377;
 }
 
-input[type=text]::-moz-placeholder {
-  color: #ed6377;
-}
-
 input[type=text]::placeholder {
   color: #ed6377;
 }
@@ -142,9 +138,7 @@ button span:after {
 }
 
 body {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
   position: relative;
   display: flex;
   justify-content: center;
@@ -235,9 +229,9 @@ body {
 .bottom-left {
   grid-column: 1/2;
   grid-row: 2;
-  height: 40vh;
-  width: 25vw;
-  margin-top: -40vh;
+  height: 25vh;
+  width: 30vw;
+  margin-top: -20vh;
   margin-left: 5vw;
   background: linear-gradient(50deg, rgb(156, 180, 143) 14%, rgb(231, 249, 195) 76%);
 }
@@ -254,9 +248,10 @@ body {
 .bottom-right {
   grid-column: 2/3;
   grid-row: 2;
-  height: 60px;
-  width: 60px;
-  margin-left: -20vw;
+  height: 30vh;
+  width: 25vw;
+  margin-left: -2vw;
+  margin-top: 2vw;
 }
 .bottom-right:hover {
   transform: scale(1.1);
@@ -319,7 +314,7 @@ body {
   font-size: 1.2rem;
 }
 .details-container .latin-name {
-  color: grey;
+  color: rgb(180, 229, 19);
 }
 .details-container .details {
   margin: 3px 0px;
